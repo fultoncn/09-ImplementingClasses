@@ -66,6 +66,7 @@ class Point(object):
         return Point(self.x, self.y)
     # Returns a new Point whose x and y coordinates are the same
     # as the x and y coordinates of this Point.
+    # returns a Point class, which is why point is capalized.
 
     def move_to(self, x, y):
         self.x = x
@@ -82,13 +83,7 @@ class Point(object):
     # of this Point. This "moves" this point by the given (dx,dy).
 
     def get_number_of_moves_made(self):
-        count = 0
-        if run_test_move_by():
-            count = count + 1
-        if run_test_move_to():
-            count = count + 1
-        return count
-
+        return self.count
     # Returns an integer that is the number of times that this point has "moved"
     # via calls to move_to and/or move_by.
 
@@ -103,6 +98,8 @@ class Point(object):
         totaly = (point.y - self.y) ** 2
         distance = totalx + totaly
         return math.sqrt(distance)
+
+
 
 def run_test_init():
     """
